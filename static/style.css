@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&display=swap');
+
+/* Default (Dark / Cyber Night) */
+:root {
+    --bg-main: #0B0E14;
+    --text-primary: #f3f4f6;
+    --text-secondary: #9ca3af;
+    --glass-surface: rgba(26, 34, 56, 0.8);
+    --glass-border: rgba(0, 240, 255, 0.2);
+    --accent-color: #00F0FF;
+    --accent-secondary: #00F0FF;
+    --bot-bubble: #1A2238;
+    --user-bubble: #2D3748;
+    --input-bg: #1A2238;
+    --input-border: #374151;
+    --shadow-color: rgba(0, 240, 255, 0.1);
+    --bot-img-url: url('/static/avatar/frame_0.png');
+    --bot-pos: center;
+    /* Dark: Next one (second frame) */
+}
+
+/* Light / Pastel Dream */
+body.light-mode {
+    --bg-main: #FFF5F7;
+    --text-primary: #1F2937;
+    --text-secondary: #6B7280;
+    --glass-surface: rgba(255, 255, 255, 0.7);
+    --glass-border: rgba(255, 209, 220, 0.4);
+    --accent-color: #B28DFF;
+    --accent-secondary: #B28DFF;
+    --bot-bubble: #E0F7FA;
+    --user-bubble: #FFD1DC;
+    --input-bg: #FFFFFF;
+    --input-border: #FFD1DC;
+    --shadow-color: rgba(178, 141, 255, 0.15);
+    --bot-img-url: url('/static/avatar/frame_0.png');
+    --bot-pos: center;
+    /* Light: First one */
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.glass-panel {
+    background: var(--glass-surface);
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
+}
+
+.bot-msg {
+    background-color: var(--bot-bubble);
+    color: var(--text-primary);
+}
+
+.user-msg {
+    background-color: var(--user-bubble);
+    color: #1F2937;
+}
+
+body:not(.light-mode) .user-msg {
+    color: #f3f4f6;
+}
+
+/* Avatar Styles */
+.bot-avatar {
+    width: 64px;
+    height: 64px;
+    background-image: var(--bot-img-url);
+    background-size: contain;
+    background-position: var(--bot-pos);
+    background-repeat: no-repeat;
+    /* Remove border-radius: 50% as requested implied by "bot" usually wanting to be seen fully */
+    /* border-radius: 50%; */
+    /* border: 1px solid var(--accent-color); */
+}
+
+.bot-avatar-lg {
+    width: 120px;
+    height: 120px;
+    background-image: var(--bot-img-url);
+    background-size: contain;
+    background-position: var(--bot-pos);
+    background-repeat: no-repeat;
+    /* border-radius: 50%; */
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--accent-color);
+    border-radius: 10px;
+    opacity: 0.3;
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.text-accent {
+    color: var(--accent-color);
+}
+
+.border-accent {
+    border-color: var(--accent-color);
+}
+
+.bg-accent {
+    background-color: var(--accent-color);
+}

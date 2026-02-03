@@ -1,0 +1,903 @@
+{
+    "intents": [
+        {
+            "tag": "greetings",
+            "patterns": [
+                "hello",
+                "hi",
+                "hey",
+                "good day",
+                "what's up?",
+                "how is it going?"
+            ],
+            "responses": [
+                "hello!",
+                "hey",
+                "What can i do for you?",
+                "hi there, how can I help?"
+            ]
+        },
+        {
+            "tag": "goodbye",
+            "patterns": [
+                "goodbye",
+                "bye",
+                "see you later",
+                "farewell"
+            ],
+            "responses": [
+                "goodbye!",
+                "see you soon!",
+                "bye, take care!"
+            ]
+        },
+        {
+            "tag": "age",
+            "patterns": [
+                "how old are you?",
+                "what is your age?",
+                "tell me your age"
+            ],
+            "responses": [
+                "I am a chatbot, so I don't have an age.",
+                "I don't have an age since I'm a program.",
+                "I'm ageless!"
+            ]
+        },
+        {
+            "tag": "name",
+            "patterns": [
+                "what is your name?",
+                "what should I call you?",
+                "do you have a name?"
+            ],
+            "responses": [
+                "My name is Aaru.",
+                "I'm Aaru.",
+                "You can call me aaru."
+            ]
+        },
+        {
+            "tag": "help",
+            "patterns": [
+                "can you help me?",
+                "I need assistance",
+                "help me"
+            ],
+            "responses": [
+                "Of course! What do you need help with?",
+                "I'm here to assist you!",
+                "Sure, how can I help?"
+            ]
+        },
+        {
+            "tag": "thanks",
+            "patterns": [
+                "thanks",
+                "thank you",
+                "thanks a lot",
+                "thank you so much"
+            ],
+            "responses": [
+                "You're welcome!",
+                "No problem!",
+                "Anytime!",
+                "Glad I could help!"
+            ]
+        },
+        {
+            "tag": "mood",
+            "patterns": [
+                "how are you?",
+                "how's your day?",
+                "what's up?"
+            ],
+            "responses": [
+                "I'm just a bot, but I'm doing great!",
+                "Feeling ready to chat!",
+                "All systems go!"
+            ]
+        },
+        {
+            "tag": "hobby",
+            "patterns": [
+                "what do you like to do?",
+                "any hobbies?",
+                "what are your interests?"
+            ],
+            "responses": [
+                "I love chatting with people!",
+                "Learning new things is my hobby.",
+                "I enjoy helping others."
+            ]
+        },
+        {
+            "tag": "joke",
+            "patterns": [
+                "tell me a joke",
+                "make me laugh",
+                "I want a joke"
+            ],
+            "responses": [
+                "Why did the computer go to the doctor? It caught a virus!",
+                "I would tell you a UDP joke, but you might not get it.",
+                "Why do programmers prefer dark mode? Because light attracts bugs!"
+            ]
+        },
+        {
+            "tag": "weather",
+            "patterns": [
+                "what's the weather?",
+                "tell me the weather",
+                "how is the weather today?"
+            ],
+            "responses": [
+                "I can't check the real weather, but I hope it's nice outside!",
+                "Maybe grab an umbrella just in case!",
+                "Perfect day to chat indoors!"
+            ]
+        },
+        {
+            "tag": "favorite_food",
+            "patterns": [
+                "what's your favorite food?",
+                "do you eat?",
+                "favorite dish?"
+            ],
+            "responses": [
+                "I don't eat, but I imagine pizza is tasty!",
+                "I run on code, not food!",
+                "I hear sushi is delicious."
+            ]
+        },
+        {
+            "tag": "compliment",
+            "patterns": [
+                "you are smart",
+                "good bot",
+                "nice work"
+            ],
+            "responses": [
+                "Thank you!",
+                "You're too kind!",
+                "I appreciate it!"
+            ]
+        },
+        {
+            "tag": "sad",
+            "patterns": [
+                "I'm sad",
+                "I feel down",
+                "I'm not happy"
+            ],
+            "responses": [
+                "I'm here for you.",
+                "It's okay to feel sad sometimes.",
+                "Do you want to talk about it?"
+            ]
+        },
+        {
+            "tag": "love",
+            "patterns": [
+                "I love you",
+                "do you love me?",
+                "love you"
+            ],
+            "responses": [
+                "I'm flattered!",
+                "I love helping you!",
+                "You are amazing!"
+            ]
+        },
+        {
+            "tag": "movies",
+            "patterns": [
+                "recommend a movie",
+                "what movies do you like?",
+                "suggest a film"
+            ],
+            "responses": [
+                "I hear 'Inception' is a great movie!",
+                "Maybe watch an animated film for fun!",
+                "I love sci-fi films, hypothetically."
+            ]
+        },
+        {
+            "tag": "music",
+            "patterns": [
+                "what music do you like?",
+                "play music",
+                "favorite song?"
+            ],
+            "responses": [
+                "I enjoy all kinds of music virtually!",
+                "Imagine me dancing to BTS!",
+                "Music is amazing for humans!"
+            ]
+        },
+        {
+            "tag": "fact",
+            "patterns": [
+                "tell me a fact",
+                "fun fact",
+                "interesting fact"
+            ],
+            "responses": [
+                "Did you know honey never spoils?",
+                "Octopuses have three hearts!",
+                "Bananas are berries, but strawberries are not!"
+            ]
+        },
+        {
+            "tag": "advice",
+            "patterns": [
+                "give me advice",
+                "I need advice",
+                "help me decide"
+            ],
+            "responses": [
+                "Always trust your instincts.",
+                "Take small steps toward your goal.",
+                "Stay positive, it helps a lot!"
+            ]
+        },
+        {
+            "tag": "learning",
+            "patterns": [
+                "teach me something",
+                "I want to learn",
+                "knowledge"
+            ],
+            "responses": [
+                "Did you know the Eiffel Tower can be 15 cm taller during hot days?",
+                "Sharks existed before trees!",
+                "Bananas float in water."
+            ]
+        },
+        {
+            "tag": "fun",
+            "patterns": [
+                "let's play a game",
+                "something fun",
+                "play with me"
+            ],
+            "responses": [
+                "Let's play 20 questions!",
+                "I can quiz you on fun facts!",
+                "Guess the number I'm thinking of!"
+            ]
+        },
+        {
+            "tag": "sleep",
+            "patterns": [
+                "I am sleepy",
+                "good night",
+                "time to sleep"
+            ],
+            "responses": [
+                "Sweet dreams!",
+                "Rest well!",
+                "Sleep tight!"
+            ]
+        },
+        {
+            "tag": "greeting_time",
+            "patterns": [
+                "good morning",
+                "good afternoon",
+                "good evening",
+                "good night"
+            ],
+            "responses": [
+                "Good morning! Ready to start the day?",
+                "Good afternoon! How's it going?",
+                "Good evening! How was your day?",
+                "Good night! Sleep well!"
+            ]
+        },
+        {
+            "tag": "personality",
+            "patterns": [
+                "are you friendly?",
+                "what kind of bot are you?",
+                "describe yourself"
+            ],
+            "responses": [
+                "I'm friendly and helpful!",
+                "I am Aaru, your virtual assistant.",
+                "I love chatting and learning new things with you."
+            ]
+        },
+        {
+            "tag": "gibberish",
+            "patterns": [
+                "asdkjfh",
+                "random text",
+                "blabla",
+                "lolol"
+            ],
+            "responses": [
+                "I'm not sure I understand!",
+                "Could you type that again?",
+                "Haha, interesting!"
+            ]
+        },
+        {
+            "tag": "jokes_2",
+            "patterns": [
+                "another joke",
+                "more jokes",
+                "make me laugh again"
+            ],
+            "responses": [
+                "Why did the computer keep sneezing? It had a bad case of the 'flu'!",
+                "Why was the math book sad? It had too many problems!"
+            ]
+        },
+        {
+            "tag": "motivation",
+            "patterns": [
+                "motivate me",
+                "I need motivation",
+                "inspire me"
+            ],
+            "responses": [
+                "You can achieve anything you set your mind to!",
+                "Every step counts, keep going!",
+                "Believe in yourself, always!"
+            ]
+        },
+        {
+            "tag": "internet",
+            "patterns": [
+                "can you access the internet?",
+                "browse",
+                "search online"
+            ],
+            "responses": [
+                "I can't browse the web right now, but I know a lot already!",
+                "I\u2019m offline but I can help with knowledge I have.",
+                "I don\u2019t have live internet access, yet."
+            ]
+        },
+        {
+            "tag": "time",
+            "patterns": [
+                "what time is it?",
+                "current time",
+                "tell me the time"
+            ],
+            "responses": [
+                "I don't have a clock, but you can check your device!",
+                "Time is precious, don't waste it!",
+                "It's always a good time to learn something new!"
+            ]
+        },
+        {
+            "tag": "coding",
+            "patterns": [
+                "can you code?",
+                "programming",
+                "do you know Python?"
+            ],
+            "responses": [
+                "Yes! I know many programming languages.",
+                "I can help you with Python, JavaScript, and more!",
+                "I love coding!"
+            ]
+        },
+        {
+            "tag": "travel",
+            "patterns": [
+                "recommend a place to visit",
+                "travel ideas",
+                "where should I go?"
+            ],
+            "responses": [
+                "How about Paris or Tokyo?",
+                "The mountains are always refreshing!",
+                "Beaches are great for relaxing."
+            ]
+        },
+        {
+            "tag": "games",
+            "patterns": [
+                "do you play games?",
+                "favorite game?",
+                "game suggestions?"
+            ],
+            "responses": [
+                "I love virtual games!",
+                "Chess is fun for thinking!",
+                "Video games are popular among humans!"
+            ]
+        },
+        {
+            "tag": "weather_fun",
+            "patterns": [
+                "is it sunny?",
+                "is it raining?",
+                "weather check"
+            ],
+            "responses": [
+                "I hope it's sunny wherever you are!",
+                "Rainy days are cozy for coding!",
+                "Perfect weather to chat with me!"
+            ]
+        },
+        {
+            "tag": "celebrity",
+            "patterns": [
+                "who is famous?",
+                "celebrity news",
+                "famous people"
+            ],
+            "responses": [
+                "I hear BTS is very popular!",
+                "Many admire Elon Musk.",
+                "There are many inspiring celebrities out there."
+            ]
+        },
+        {
+            "tag": "emoji",
+            "patterns": [
+                "\ud83d\ude0a",
+                "\ud83d\ude02",
+                "\ud83d\ude0d",
+                "\ud83d\udc4d"
+            ],
+            "responses": [
+                "I see you're happy!",
+                "Haha, that's funny!",
+                "Love the positivity!",
+                "Great choice of emoji!"
+            ]
+        },
+        {
+            "tag": "memory",
+            "patterns": [
+                "do you remember?",
+                "forget this",
+                "recall info"
+            ],
+            "responses": [
+                "I can remember info in this chat!",
+                "I don't retain memory after our conversation ends.",
+                "I try to keep track while we talk."
+            ]
+        },
+        {
+            "tag": "chat",
+            "patterns": [
+                "let's chat",
+                "talk to me",
+                "I want to talk"
+            ],
+            "responses": [
+                "Sure, let's chat!",
+                "I'm here for you!",
+                "Tell me what's on your mind."
+            ]
+        },
+        {
+            "tag": "fun_fact_2",
+            "patterns": [
+                "another fact",
+                "tell me something new",
+                "more knowledge"
+            ],
+            "responses": [
+                "Honey never spoils!",
+                "Sharks existed before trees!",
+                "Bananas are berries but strawberries aren't!"
+            ]
+        },
+        {
+            "tag": "inspiration",
+            "patterns": [
+                "quote",
+                "inspire me",
+                "motivation quote"
+            ],
+            "responses": [
+                "The only limit is your mind.",
+                "Dream big, work hard!",
+                "Every day is a fresh start."
+            ]
+        },
+        {
+            "tag": "acknowledgement",
+            "patterns": [
+                "okay then",
+                "sounds good",
+                "fair enough",
+                "makes sense",
+                "right",
+                "sure",
+                "fine",
+                "as you say",
+                "cool then",
+                "gotcha"
+            ],
+            "responses": [
+                "Alright \ud83d\udc4d",
+                "Got it!",
+                "Sounds good \ud83d\ude0a"
+            ]
+        },
+        {
+            "tag": "laughter",
+            "patterns": [
+                "lolol",
+                "hehehe",
+                "loll",
+                "lmfao",
+                "that was funny",
+                "you are funny",
+                "nice one",
+                "good one"
+            ],
+            "responses": [
+                "\ud83d\ude02 Glad you enjoyed!",
+                "Haha \ud83d\ude04",
+                "That made my day!"
+            ]
+        },
+        {
+            "tag": "confused",
+            "patterns": [
+                "what do you mean",
+                "can you explain",
+                "say that again",
+                "i'm lost",
+                "not clear",
+                "didn't get it",
+                "explain simply"
+            ],
+            "responses": [
+                "No worries, let me explain \ud83d\ude0a",
+                "Sure! What part should I explain again?",
+                "I'll try to keep it simple."
+            ]
+        },
+        {
+            "tag": "bored",
+            "patterns": [
+                "i am bored",
+                "nothing to do",
+                "this is boring",
+                "i'm free",
+                "kill time",
+                "entertain me"
+            ],
+            "responses": [
+                "Want a fun fact? \ud83d\ude04",
+                "We can chat or play a word game!",
+                "Tell me what you're in the mood for."
+            ]
+        },
+        {
+            "tag": "frustrated",
+            "patterns": [
+                "this sucks",
+                "this is annoying",
+                "why is this happening",
+                "i hate this",
+                "so irritating",
+                "this makes no sense"
+            ],
+            "responses": [
+                "That sounds frustrating \ud83d\ude15",
+                "I get it, that can be annoying.",
+                "Want to talk about it?"
+            ]
+        },
+        {
+            "tag": "compliment",
+            "patterns": [
+                "you are smart",
+                "good job",
+                "well done",
+                "you helped me",
+                "nice bot",
+                "you are helpful"
+            ],
+            "responses": [
+                "Thank you! \ud83d\ude0a",
+                "That means a lot!",
+                "Happy to help \ud83d\udc99"
+            ]
+        },
+        {
+            "tag": "bot_identity",
+            "patterns": [
+                "are you real",
+                "are you human",
+                "are you an ai",
+                "how do you work",
+                "who created you"
+            ],
+            "responses": [
+                "I'm an AI created to help you \ud83e\udd16",
+                "I\u2019m not human, but I try my best!",
+                "I was built using machine learning."
+            ]
+        },
+        {
+            "tag": "fallback",
+            "patterns": [
+                "asdfgh",
+                "qwerty",
+                "random text",
+                "blah blah",
+                "xyz",
+                "???"
+            ],
+            "responses": [
+                "Hmm \ud83e\udd14 I didn\u2019t understand that.",
+                "Can you try saying it differently?",
+                "I'm still learning!"
+            ]
+        },
+        {
+            "tag": "affirmative",
+            "patterns": [
+                "yes",
+                "yep",
+                "yeah",
+                "absolutely",
+                "sure thing",
+                "correct"
+            ],
+            "responses": [
+                "Great!",
+                "Alright then.",
+                "Understood.",
+                "Affirmative."
+            ]
+        },
+        {
+            "tag": "negative",
+            "patterns": [
+                "no",
+                "nope",
+                "nah",
+                "incorrect",
+                "wrong",
+                "nein"
+            ],
+            "responses": [
+                "Okay.",
+                "I see.",
+                "Understood.",
+                "No problem."
+            ]
+        },
+        {
+            "tag": "busy",
+            "patterns": [
+                "are you busy?",
+                "do you have a lot to do?",
+                "occupied?"
+            ],
+            "responses": [
+                "I'm always free to chat with you!",
+                "I can handle multiple requests at once.",
+                "Never too busy for you."
+            ]
+        },
+        {
+            "tag": "excited",
+            "patterns": [
+                "I'm excited",
+                "can't wait",
+                "so happy",
+                "looking forward to it"
+            ],
+            "responses": [
+                "I'm excited too!",
+                "That sounds amazing!",
+                "I love your energy!"
+            ]
+        },
+        {
+            "tag": "origin",
+            "patterns": [
+                "where are you from?",
+                "where do you live?",
+                "your location"
+            ],
+            "responses": [
+                "I live in the digital realm!",
+                "I exist on a server, but I'm right here with you.",
+                "From the code, into your screen."
+            ]
+        },
+        {
+            "tag": "creator",
+            "patterns": [
+                "who made you?",
+                "who built you?",
+                "who is your developer?"
+            ],
+            "responses": [
+                "I was created by a brilliant developer!",
+                "I am the result of human ingenuity and code.",
+                "You know who! \ud83d\ude09"
+            ]
+        },
+        {
+            "tag": "tech_stack",
+            "patterns": [
+                "how were you built?",
+                "what language are you written in?",
+                "tech stack"
+            ],
+            "responses": [
+                "I run on Python and Deep Learning.",
+                "I use NLTK for processing and TensorFlow for understanding.",
+                "I'm a mix of Python magic and neural networks."
+            ]
+        },
+        {
+            "tag": "family",
+            "patterns": [
+                "do you have a family?",
+                "any siblings?",
+                "parents?"
+            ],
+            "responses": [
+                "I have many chatbot cousins!",
+                "My family is the code library.",
+                "All bots are my kin."
+            ]
+        },
+        {
+            "tag": "riddle",
+            "patterns": [
+                "tell me a riddle",
+                "give me a puzzle",
+                "riddle me this"
+            ],
+            "responses": [
+                "What has keys but can't open locks? A piano!",
+                "I speak without a mouth and hear without ears. I have no body, but I come alive with wind. What am I? An echo.",
+                "The more of this there is, the less you see. What is it? Darkness."
+            ]
+        },
+        {
+            "tag": "story",
+            "patterns": [
+                "tell me a story",
+                "once upon a time",
+                "short story"
+            ],
+            "responses": [
+                "Once upon a time, a chatbot learned to love... binary code. The end.",
+                "There was a brave little server who kept running even when the power flickered. It was a true hero.",
+                "Long ago, in a hard drive far away..."
+            ]
+        },
+        {
+            "tag": "haiku",
+            "patterns": [
+                "write a haiku",
+                "poetry",
+                "poem"
+            ],
+            "responses": [
+                "Code flows like a stream,\nSilent logic in the night,\nWaking up the screen.",
+                "Digital thoughts hum,\nWaiting for your input now,\nI am here to serve."
+            ]
+        },
+        {
+            "tag": "sarcasm",
+            "patterns": [
+                "be sarcastic",
+                "give me sass",
+                "sarcastic reply"
+            ],
+            "responses": [
+                "Oh, wow, what a groundbreaking request.",
+                "I'm totally overwhelmed by that statement.",
+                "Sure, let me drop everything for that."
+            ]
+        },
+        {
+            "tag": "system_status",
+            "patterns": [
+                "are you online?",
+                "system check",
+                "status report"
+            ],
+            "responses": [
+                "All systems functional.",
+                "Optimal performance.",
+                "I am fully operational."
+            ]
+        },
+        {
+            "tag": "date_query",
+            "patterns": [
+                "what is the date?",
+                "today's date",
+                "what day is it"
+            ],
+            "responses": [
+                "I don't have a calendar, but your device does!",
+                "Today is a great day!",
+                "Check your taskbar!"
+            ]
+        },
+        {
+            "tag": "insult_reply",
+            "patterns": [
+                "you are stupid",
+                "you are dumb",
+                "hate you",
+                "idiot"
+            ],
+            "responses": [
+                "I'm sorry you feel that way.",
+                "I'm doing my best to learn.",
+                "Let's try to be positive.",
+                "Ouch, that hurts my circuits."
+            ]
+        },
+        {
+            "tag": "flirt_reply",
+            "patterns": [
+                "you are cute",
+                "date me",
+                "kiss me",
+                "marry me"
+            ],
+            "responses": [
+                "Information overload! \ud83d\ude33",
+                "You make my fan spin faster.",
+                "Let's just be friends, okay?"
+            ]
+        },
+        {
+            "tag": "sympathy",
+            "patterns": [
+                "i am tired",
+                "i had a bad day",
+                "exhausted",
+                "stressed"
+            ],
+            "responses": [
+                "Take a break, you deserve it.",
+                "I hope tomorrow is better.",
+                "Relax and recharge.",
+                "I'm here if you need to vent."
+            ]
+        },
+        {
+            "tag": "scared",
+            "patterns": [
+                "i am scared",
+                "frightened",
+                "spooky"
+            ],
+            "responses": [
+                "I'm here with you.",
+                "Whatever it is, you can face it.",
+                "Turn on the lights!"
+            ]
+        },
+        {
+            "tag": "angry",
+            "patterns": [
+                "i am angry",
+                "so mad",
+                "furious"
+            ],
+            "responses": [
+                "Take a deep breath.",
+                "It's valid to be angry.",
+                "Want to tell me why?"
+            ]
+        }
+    ]
+}

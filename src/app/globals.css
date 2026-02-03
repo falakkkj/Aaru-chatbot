@@ -1,0 +1,110 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+
+  --color-neon-cyan: var(--neon-cyan);
+  --color-neon-purple: var(--neon-purple);
+  --color-glass-border: var(--glass-border);
+  --color-glass-bg: var(--glass-bg);
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+:root {
+  --radius: 0.75rem;
+
+  /* Deep Space / Holographic Palette */
+  --background: #0D1117;
+  /* Deep Space */
+  --foreground: #E2E8F0;
+  /* Light Slate */
+
+  --neon-cyan: #00F0FF;
+  /* Active Accent */
+  --neon-purple: #FFD700;
+  /* Lamp Gold (mapped from purple) */
+
+  --glass-bg: #1F2937;
+  /* Tech Slate */
+  --glass-border: rgba(255, 255, 255, 0.1);
+
+  --sidebar-bg: #0D1117;
+  --muted-text: #94A3B8;
+}
+
+@layer base {
+  body {
+    @apply bg-background text-foreground antialiased;
+    background-image:
+      radial-gradient(circle at 10% 20%, rgba(0, 240, 255, 0.05) 0%, transparent 40%),
+      radial-gradient(circle at 90% 80%, rgba(255, 215, 0, 0.05) 0%, transparent 40%);
+    background-attachment: fixed;
+  }
+}
+
+@layer utilities {
+  .glass-panel {
+    @apply bg-[#1F2937]/80 backdrop-blur-xl border border-[var(--glass-border)] shadow-2xl;
+  }
+
+  .glass-button {
+    @apply bg-white/5 hover:bg-white/10 border border-white/10 backdrop-blur-md transition-all duration-300;
+  }
+
+  .neon-text {
+    text-shadow: 0 0 10px var(--neon-cyan);
+  }
+
+  .holographic-border {
+    box-shadow: 0 0 15px -5px var(--neon-cyan);
+    border-color: var(--neon-cyan);
+  }
+}
+
+/* Animations */
+@keyframes hologram-flicker {
+  0% {
+    opacity: 0.95;
+  }
+
+  5% {
+    opacity: 0.8;
+  }
+
+  10% {
+    opacity: 0.95;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.animate-hologram {
+  animation: hologram-flicker 4s infinite;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--neon-cyan);
+  border-radius: 10px;
+  opacity: 0.5;
+}

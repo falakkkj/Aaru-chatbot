@@ -1,0 +1,6 @@
+flask
+flask-cors
+tensorflow
+numpy
+nltk
+pickle5; python_version < '3.8'
