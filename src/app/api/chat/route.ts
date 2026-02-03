@@ -1,6 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-
-const CHATBOT_SERVER_URL = 'http://127.0.0.1:5000/chat';
+import { getChatbotResponse } from '@/lib/chatbot';
 
 export async function POST(request: NextRequest) {
   try {
@@ -13,34 +12,12 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Call the Flask chatbot server
-    const response = await fetch(CHATBOT_SERVER_URL, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ message }),
-    });
+    // Call the native TypeScript chatbot logic
+    const chatResponse = getChatbotResponse(message);
 
-    if (!response.ok) {
-      throw new Error(`Chatbot server responded with status ${response.status}`);
-    }
-
-    const data = await response.json();
-    return NextResponse.json({ response: data.response });
+    return NextResponse.json({ response: chatResponse });
   } catch (error) {
     console.error('Chat API error:', error);
-
-    // Check if it's a connection error
-    if (error instanceof Error && error.message.includes('fetch')) {
-      return NextResponse.json(
-        {
-          error: 'Chatbot server is not running. Please start the Python server first.',
-          details: 'Run: python chatbot/server.py'
-        },
-        { status: 503 }
-      );
-    }
 
     return NextResponse.json(
       { error: 'Failed to process message', details: error instanceof Error ? error.message : 'Unknown error' },
