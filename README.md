@@ -1,26 +1,33 @@
 🤖 Aaru Bot – AI Chatbot | Your Personal Assistant
 
-Aaru Bot is an AI-powered conversational chatbot built using Python (NLP-based model training) and integrated with a TypeScript/Next.js frontend interface.
+Aaru Bot is a deployed AI-powered conversational chatbot built using Python (NLP-based model training) and integrated with a TypeScript/Next.js frontend interface.
 
-The chatbot was initially developed as a terminal-based application and later enhanced with a modern UI to improve user interaction and usability.
+Originally developed as a terminal-based chatbot, the project was later transformed into a fully interactive web application and deployed using Vercel.
+
+🌐 Live Demo
+
+🔗 Production: https://aaru-chatbot.vercel.app
+
+🔗 Preview Deployments:
+
+https://aaru-chatbot-git-main-falak-jains-projects-b880f654.vercel.app
+
+https://aaru-chatbot-29vvhbvan-falak-jains-projects-b880f654.vercel.app
 
 🚀 Features
 
 🧠 Custom trained NLP-based chatbot model
 
-💬 Intent recognition and response generation
+💬 Intent recognition & response prediction
 
-🖥 Initially terminal-based execution
-
-🌐 Integrated TypeScript/Next.js frontend interface
+🌐 Fully deployed web interface
 
 🔄 Backend–Frontend integration
 
 📦 Modular and scalable architecture
 
 🛠 Tech Stack
-
-Backend (AI Model):
+Backend (AI Model)
 
 Python
 
@@ -32,7 +39,7 @@ NumPy
 
 Pickle
 
-Frontend:
+Frontend
 
 TypeScript
 
@@ -42,60 +49,52 @@ JavaScript
 
 HTML/CSS
 
-📂 Project Structure
-Aaru-chatbot/
-│
-├── train.py              # Model training script
-├── chatbot_model.h5      # Trained chatbot model
-├── intents.json          # Training intents data
-├── words.pkl             # Processed vocabulary
-├── classes.pkl           # Output classes
-├── frontend/             # TypeScript / Next.js UI
-└── ...
+Deployment
+
+Vercel
+
 ⚙️ How It Works
 
-The chatbot is trained using predefined intents and responses.
+The chatbot is trained using predefined intents (intents.json).
 
-NLP techniques process user input.
+NLP preprocessing converts user input into numerical data.
 
-The trained model predicts the most relevant intent.
+The trained model (chatbot_model.h5) predicts the correct intent.
 
-A structured response is returned.
+A structured response is returned to the frontend.
 
-The frontend interface displays the response in an interactive UI.
+The TypeScript interface displays responses interactively.
 
-🧪 How to Run Locally
-🔹 Backend (Python)
+🧪 Run Locally
+Backend
 pip install -r requirements.txt
 python train.py
-python app.py
-🔹 Frontend
+Frontend
 cd frontend
 npm install
 npm run dev
 🎯 Learning Outcomes
 
-Practical implementation of conversational AI
+NLP preprocessing and intent classification
 
-NLP preprocessing and model training
+Model training with TensorFlow/Keras
 
-TensorFlow/Keras model handling
+Full-stack AI application development
 
-Backend–Frontend integration
+Deployment using Vercel
 
-Building AI applications beyond terminal
-
-📌 Future Improvements
-
-Add context memory
-
-Deploy as a cloud-based assistant
-
-Add voice interaction
-
-Improve response accuracy
+Real-world project structuring
 
 👩‍💻 Author
 
 Falak Jain
 B.Tech Artificial Intelligence & Machine Learning
+Government Mahila Engineering College, Ajmer
+
+🔥 IMPORTANT:
+
+On LinkedIn, now you can confidently write:
+
+Deployed AI Chatbot on Vercel with Python-trained NLP backend and TypeScript frontend.
+
+That sounds powerful.
